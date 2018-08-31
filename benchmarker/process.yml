@@ -1,0 +1,13 @@
+# Process config for PM2
+
+apps:
+  - script: ./bootstrap.sh
+    args: shuke
+    cwd: scripts
+    name: shuke
+    restart_delay: 90000
+  - script: ./bootstrap.sh
+    args: beita
+    cwd: scripts
+    name: beita
+    restart_delay: 90000

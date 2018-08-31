@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package communication;
+
+option java_package = "communication";
+option java_outer_classname = "MessageProtos";
+
+message Request {
+  int64 requestId = 1;
+  string interface = 2;
+  string parameterTypesString = 3;
+  string method = 4;
+  string parameter = 5;
+}
+
+message Response {
+  int64 requestId = 1;
+  string content = 2;
+}
